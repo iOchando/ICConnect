@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "ICConnect_backend": {
+      "main": "src/ICConnect_backend/main.mo",
+      "type": "motoko"
+    },
+    "ICConnect_frontend": {
+      "dependencies": [
+        "ICConnect_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/ICConnect_frontend/src/index.html"
+      },
+      "source": [
+        "src/ICConnect_frontend/assets",
+        "dist/ICConnect_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
